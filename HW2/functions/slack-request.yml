@@ -1,0 +1,10 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  slack-request:
+    lang: python
+    handler: ./slack-request
+    image: husainunwalla/slack-request
+    environment:
+      content_type: application/json
